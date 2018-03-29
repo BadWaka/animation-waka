@@ -1,0 +1,24 @@
+{
+  "name": "animation-waka",
+  "version": "1.0.0",
+  "description": "animation",
+  "main": "newfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BadWaka/animation-waka.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BadWaka/animation-waka/issues"
+  },
+  "homepage": "https://github.com/BadWaka/animation-waka#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

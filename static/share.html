@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta>
+    <title>share</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #a {
+            position: relative;
+            left: -190px;
+            width: 200px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a"></div>
+</body>
+
+<script>
+    window.onload = function () {
+        var a = document.querySelector('#a');
+        a.onmouseover = function () {
+            startMove(5, 0);
+        }
+        a.onmouseout = function () {
+            startMove(-5, -190);
+        }
+        var timer = null;
+
+        function startMove(speed, target) {
+            console.log('startMove');
+            clearInterval(timer);
+            timer = setInterval(function () {
+                if (a.offsetLeft === target) {
+                    clearInterval(timer);
+                } else {
+                    a.style.left = a.offsetLeft + speed + 'px';
+                }
+            }, 16);
+        }
+    }
+</script>
+
+</html>
