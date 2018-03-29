@@ -27,17 +27,19 @@
     window.onload = function () {
         var a = document.querySelector('#a');
         a.onmouseover = function () {
-            startMove(5, 0);
+            startMove(0);
         }
         a.onmouseout = function () {
-            startMove(-5, -190);
+            startMove(-190);
         }
         var timer = null;
 
-        function startMove(speed, target) {
+        function startMove(target) {
             console.log('startMove');
             clearInterval(timer);
             timer = setInterval(function () {
+                // 距离越小，速度越慢
+                var speed = (target - a.offsetLeft) / 10;
                 if (a.offsetLeft === target) {
                     clearInterval(timer);
                 } else {
